@@ -88,4 +88,7 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
+# Bundled JS
+dist/bundle.js
+
 # End of https://www.gitignore.io/api/node
