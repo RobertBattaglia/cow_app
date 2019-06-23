@@ -4,6 +4,12 @@ var controllers = require('./controllers');
 var app = express();
 
 app.use(express.json());
+app.use(require('cors')());
+app.use(
+  require('morgan')(
+    ':method :url :status :res[content-length] - :response-time ms'
+  )
+);
 
 app.get('/', (req, res) => {
   res.send('Hello World');
