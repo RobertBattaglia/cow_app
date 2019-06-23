@@ -1,14 +1,17 @@
 var express = require('express');
 
 var app = express();
-var router = express.Router();
 
-app.use('/', router);
-app.use(require('body-parser'));
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
+app.get('/cows', (req, res) => {});
+
+app.post('/cows', (req, res) => {});
 
 if (!module.parent) {
-  app().listen(3000);
+  app.listen(1337);
 }
 
 module.exports.app = app;
-module.exports.router = router;
