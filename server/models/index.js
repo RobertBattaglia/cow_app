@@ -1,9 +1,19 @@
 var db = require('../db').db;
 
-db.queryAsync('SELECT * FROM cows')
-  .then(data => {
-    console.log(data);
-  })
-  .catch(err => {
-    console.error(err);
-  });
+module.exports.cow = {
+  get: () => {
+    return db.queryAsync('SELECT * FROM cows').catch(err => {
+      console.error(err);
+    });
+  },
+  post: ({ name, description }) => {
+    return db
+      .queryAsync('INSERT INTO cows (name, description) VALUES (?, ?)', [
+        name,
+        description
+      ])
+      .catch(err => {
+        console.error(err);
+      });
+  }
+};
