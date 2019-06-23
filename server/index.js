@@ -9,13 +9,13 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-app.get('/cows', (req, res, next) => {
+app.get('/api/cows', (req, res, next) => {
   controllers.getCows(req, res).then(() => {
     next();
   });
 });
 
-app.post('/cows', (req, res, next) => {
+app.post('/api/cows', (req, res, next) => {
   controllers.postCow(req, res).then(() => {
     next();
   });
