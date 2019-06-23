@@ -1,0 +1,18 @@
+{
+  "name": "cow_app",
+  "version": "1.0.0",
+  "description": "Full Stack From Scratch https://gist.github.com/therobinkim/66daa2cf6e4c69e4ebdc8a6213f2c1d8",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Robert Battaglia",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "mysql": "^2.17.1"
+  }
+}
