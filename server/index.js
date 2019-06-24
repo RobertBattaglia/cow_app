@@ -1,8 +1,10 @@
 var express = require('express');
 var controllers = require('./controllers');
+var path = require('path');
 
 var app = express();
 
+app.use('/', express.static(path.join(__dirname, '../', 'dist')));
 app.use(express.json());
 app.use(require('cors')());
 app.use(
@@ -10,10 +12,6 @@ app.use(
     ':method :url :status :res[content-length] - :response-time ms'
   )
 );
-
-app.get('/', (req, res) => {
-  res.send('Hello World');
-});
 
 app.get('/api/cows', (req, res, next) => {
   controllers.getCows(req, res).then(() => {
