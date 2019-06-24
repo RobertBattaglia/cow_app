@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CowList from './CowList.jsx';
 import axios from 'axios';
 
 class App extends Component {
@@ -16,11 +17,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <ul>
-          {this.state.cows.map(cow => {
-            return <li>{cow.NAME}</li>;
-          })}
-        </ul>
+        <CowList cows={this.state.cows} />
       </React.Fragment>
     );
   }
