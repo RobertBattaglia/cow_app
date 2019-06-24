@@ -1,0 +1,17 @@
+html,
+body {
+  background-image: url('images/cow-background.jpg');
+}
+
+#app {
+  background: rgb(236, 236, 236);
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 1em 5em 1em 5em;
+}
+
+.input {
+  display: block;
+  padding: 0.25em;
+  margin-bottom: 2em;
+}
